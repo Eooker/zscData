@@ -1,7 +1,7 @@
 #include "my_arduinolib.h"
 #include "Arduino.h"
 
-void DianJi_init()
+void motor_init()
 {
     pinMode(M1_A,OUTPUT);
     pinMode(M1_B,OUTPUT);
@@ -10,11 +10,11 @@ void DianJi_init()
 }
 
 
-void DianJi(char *MM,char *fangxiang,int pwm)     //电机控制函数，参数：MM电机选择（M1、M2） fangxiang电机转动方向（QianJin、HouTui）  pwm电机转速(0-255)
+void motor(char *MM,char *Direction,int pwm)     //电机控制函数，参数：MM电机选择（M1、M2） fangxiang电机转动方向（QianJin、HouTui）  pwm电机转速(0-255)
 {
   if(pwm>=0&&pwm<=255)
   {
-      if(fangxiang=="QianJin")
+      if(Direction=="forward")
     {
       if(MM=="M1")
       {
@@ -32,7 +32,7 @@ void DianJi(char *MM,char *fangxiang,int pwm)     //电机控制函数，参数�
         Serial.println("错误：电机选择参数错误");
       }
     }
-    else if(fangxiang=="HouTui")
+    else if(Direction=="backward")
     {
       if(MM=="M1")
       {
@@ -51,9 +51,7 @@ void DianJi(char *MM,char *fangxiang,int pwm)     //电机控制函数，参数�
     }
     else
     {
-      Serial.println("错误：fangxiang参数错误");
-      Serial.print("fangxiang参数为：");
-      Serial.println(fangxiang);
+      Serial.println("错误：Direction参数错误");
     }
   }
   else

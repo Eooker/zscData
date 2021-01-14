@@ -3,8 +3,8 @@
 
 
 #function and method (KEYWORD2)
-DianJi_init	KEYWORD2
-DianJi	KEYWORD2
+motor_init	KEYWORD2
+motor	KEYWORD2
 
 
 #constant (LITERA1)
@@ -14,8 +14,8 @@ M2_A	LITERA1
 M2_B	LITERA1
 M1	LITERA1
 M2	LITERA1
-QianJin	LITERA1
-HouTui	LITERA1
+forward	LITERA1
+backward	LITERA1
 Servo_A1	LITERA1
 Servo_A2	LITERA1
 Servo_D1	LITERA1
