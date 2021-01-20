@@ -17,4 +17,5 @@
 #define Servo_D4 13
 
 void motor_init();
-void motor(char *MM,char *Direction,int pwm);
+void motor_stop(char *MM);
+void motor_motion(char *MM,char *Direction,int pwm);
