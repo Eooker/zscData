@@ -3,8 +3,9 @@
 
 
 #function and method (KEYWORD2)
-motor_init	KEYWORD2
-motor	KEYWORD2
+motor_init		KEYWORD2
+motor_stop	KEYWORD2
+motor_motion	KEYWORD2
 
 
 #constant (LITERA1)
